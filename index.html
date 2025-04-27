@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camilla Lourenço Vieira | Química</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #e6f0ff; color: #333; }
+    header { background-color: #004080; color: #fff; padding: 20px 0; text-align: center; }
+    nav a { margin: 0 15px; color: #fff; text-decoration: none; font-weight: bold; }
+    section { padding: 40px 20px; }
+    .sobre { background-color: #ffffff; }
+    .blog { background-color: #f2f2f2; }
+    .contato { background-color: #ffffff; }
+    form { display: flex; flex-direction: column; max-width: 600px; margin: auto; }
+    input, textarea, select { margin-bottom: 15px; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px; }
+    input[type="submit"] { background-color: #ff8000; color: #fff; border: none; cursor: pointer; font-weight: bold; }
+    input[type="submit"]:hover { background-color: #e67300; }
+    .whatsapp-button { display: inline-block; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+
+<body>
+<header>
+  <h1>Camilla Lourenço Vieira</h1>
+  <nav>
+    <a href="#sobre">Sobre Mim</a>
+    <a href="#blog">Blog</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section id="sobre" class="sobre">
+  <h2>Sobre Mim</h2>
+  <p>Sou Camilla Lourenço Vieira, professora de Química com mais de 20 anos de experiência. Tenho Mestrado em Ciências Moleculares e Doutorado em Química. Minha missão é ajudar estudantes do Ensino Médio e pré-vestibulares a dominar a Química de forma leve e descomplicada!</p>
+</section>
+
+<section id="blog" class="blog">
+  <h2>Blog</h2>
+  <p>Em breve aqui você vai encontrar dicas, resumos e estratégias para arrasar nos estudos de Química!</p>
+</section>
+
+<section id="contato" class="contato">
+  <h2>Contato</h2>
+  <p>Preencha o formulário abaixo para que possamos te ajudar melhor:</p>
+
+  <form action="https://formspree.io/f/xwpoparr" method="POST" onsubmit="mostrarMensagem()">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telefone">Telefone/WhatsApp:</label>
+    <input type="text" id="telefone" name="telefone">
+
+    <label for="estado">Em qual estado do Brasil você mora?</label>
+    <input type="text" id="estado" name="estado" placeholder="Ex: São Paulo, Rio de Janeiro..." required>
+
+    <label for="dificuldades">Quais suas maiores dificuldades em Química?</label>
+    <textarea id="dificuldades" name="dificuldades" rows="4" required></textarea>
+
+    <label for="objetivos">O que você mais gostaria de conquistar estudando Química?</label>
+    <textarea id="objetivos" name="objetivos" rows="4" required></textarea>
+
+    <label for="urgencia">Qual a sua urgência para aprender Química?</label>
+    <select id="urgencia" name="urgencia" required>
+      <option value="">Selecione</option>
+      <option value="Preciso aprender em até 1 mês">Preciso aprender em até 1 mês</option>
+      <option value="Tenho de 2 a 6 meses para estudar">Tenho de 2 a 6 meses para estudar</option>
+      <option value="Estou me preparando a longo prazo">Estou me preparando a longo prazo</option>
+    </select>
+
+    <label for="vestibular">Qual vestibular ou prova você vai prestar?</label>
+    <input type="text" id="vestibular" name="vestibular" placeholder="Ex: ENEM, Fuvest, Unicamp, UFRJ..." required>
+
+    <input type="submit" value="Enviar Mensagem">
+  </form>
+
+  <div id="mensagem-sucesso" style="display:none; text-align:center; margin-top:30px; background:#e0ffe0; padding:20px; border-radius:8px; color:#006400;">
+    <h3>Formulário enviado!</h3>
+    <p>Agora é com a gente! 😎 Se quiser bater um papo sobre suas dificuldades e como posso te ajudar a mandar bem em Química, me chama no WhatsApp clicando no botão aqui embaixo!<br>Vai ser um prazer conversar com você.</p>
+    <a href="https://wa.me/5562992262979" target="_blank" class="whatsapp-button">Conversar pelo WhatsApp</a>
+  </div>
+</section>
+
+<script>
+function mostrarMensagem() {
+  document.querySelector('form').style.display = 'none';
+  document.getElementById('mensagem-sucesso').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
